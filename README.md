@@ -33,3 +33,6 @@ Este é um **landing page** criado para promover um casino online com foco no p�
 1. Clone este repositório:
    ```bash
    git clone git@github.com:seu-usuario/nome-do-repositorio.git
+
+
+# Тест для GitHub коміту
