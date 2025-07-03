@@ -28,3 +28,23 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 });
 localStorage.clear()
+
+  const contactLink = document.querySelector('.logosDiv a[href="responsible_page.html"]');
+  const modal = document.getElementById('contact-modal');
+  const closeBtn = document.getElementById('close-modal');
+
+  contactLink.addEventListener('click', (e) => {
+    e.preventDefault(); // скасовує перехід
+    modal.style.display = 'flex';
+  });
+
+  closeBtn.addEventListener('click', () => {
+    modal.style.display = 'none';
+  });
+
+  // Якщо хочеш зберігати форму або надіслати її — оброби submit:
+  document.getElementById('contact-form').addEventListener('submit', function(e) {
+    e.preventDefault();
+    alert('Formulário enviado com sucesso!');
+    modal.style.display = 'none';
+  });

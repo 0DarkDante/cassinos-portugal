@@ -1624,3 +1624,98 @@ a {
     font-size: 1rem;
   }
 }
+
+.contact-overlay {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.75);
+  z-index: 9999;
+  justify-content: center;
+  align-items: center;
+  backdrop-filter: blur(3px);
+}
+
+.contact-modal-content {
+  background: #ffffff;
+  padding: 2.5rem 2rem;
+  border-radius: 16px;
+  width: 90%;
+  max-width: 420px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.25);
+  font-family: 'Poppins', sans-serif;
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+.contact-modal-content h2 {
+  margin-top: 0;
+  font-size: 1.6rem;
+  color: #333;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.contact-modal-content input,
+.contact-modal-content textarea {
+  width: 100%;
+  margin-bottom: 1rem;
+  padding: 0.75rem 1rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+  background-color: #f9f9f9;
+  transition: border-color 0.2s;
+}
+
+.contact-modal-content input:focus,
+.contact-modal-content textarea:focus {
+  border-color: #4caf50;
+  outline: none;
+  background-color: #fff;
+}
+
+.contact-modal-content textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+.contact-modal-content button {
+  padding: 0.6rem 1.2rem;
+  margin-right: 0.5rem;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.contact-modal-content button[type="submit"] {
+  background-color: #4caf50;
+  color: #fff;
+}
+
+.contact-modal-content button[type="submit"]:hover {
+  background-color: #43a047;
+}
+
+.contact-modal-content button#close-modal {
+  background-color: #e53935;
+  color: #fff;
+}
+
+.contact-modal-content button#close-modal:hover {
+  background-color: #d32f2f;
+}
+
+/* М’яка анімація появи */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.97);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
